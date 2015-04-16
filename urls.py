@@ -35,6 +35,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # /api-auth/  for basic authentication page
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # /api-auth/  for session authentication page
     url(r'^api-token-auth/', views.obtain_auth_token),  ## token auth
 ]
