@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.contrib.auth.models import User
 from django.contrib import admin
 from rest_framework import routers, serializers, viewsets
-
+from rest_framework.authtoken import views
 from polls.models import Question
 
 # Serializers define the API representation.
@@ -35,5 +35,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-token-auth/', views.obtain_auth_token),
 ]
