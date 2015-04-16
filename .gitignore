@@ -1,0 +1,5 @@
+**ropeproject/*
+.ropeproject/globalnames
+.ropeproject/objectdb
+**/*.pyc
+**/.ropeproject*
