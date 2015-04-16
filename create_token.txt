@@ -1,0 +1,13 @@
+
+If you've already created some users, you can generate tokens for all existing users like this in django shell (python manage.py shell):
+
+import django
+import django
+
+from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
+
+django.setup()
+
+for user in User.objects.all():
+    Token.objects.get_or_create(user=user)
