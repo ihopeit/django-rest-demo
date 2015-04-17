@@ -40,5 +40,6 @@ urlpatterns = [
     # the rest api, you'll probably also want to add REST framework's login and logout views.
     # If you allow anonymous access in rest permission, wont need the mapping.
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api-token-auth/', views.obtain_auth_token),  ## token auth
+    #url(r'^api-token-auth/', views.obtain_auth_token),  ## token auth
+    url(r'^api-token-auth/', 'polls.views.obtain_expiring_auth_token'),  ## token auth
 ]
