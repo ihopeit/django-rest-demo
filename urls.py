@@ -35,6 +35,10 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # /api-auth/  for session authentication page
+    # /api-auth/  for session authentication page, If you're intending to use
+    # the browsable API, or you want allow only authenticated user to access
+    # the rest api, you'll probably also want to add REST framework's login and logout views.
+    # If you allow anonymous access in rest permission, wont need the mapping.
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', views.obtain_auth_token),  ## token auth
 ]
