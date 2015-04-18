@@ -1,4 +1,9 @@
+#install django and django rest framework
+pip install django
+pip install djangorestframework
 
+#start server
+python manage.py runserver 
 
 ## json service
 http://127.0.0.1:8000/ to browse json apis
