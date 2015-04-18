@@ -26,6 +26,8 @@ access api via token:
 
     http http://127.0.0.1:8000/users/  "Authorization:Token 8b1a7e57673fec4109324237dacfa13a2c4b5272"
 
+the generated token will be expired after 1 minutes.
+
 ## 2.also session based authentication is enabled:
 
 could access the browserable api at:
